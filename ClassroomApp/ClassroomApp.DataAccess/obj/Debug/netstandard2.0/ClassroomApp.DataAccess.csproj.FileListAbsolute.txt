@@ -1,0 +1,12 @@
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\bin\Debug\netstandard2.0\ClassroomApp.DataAccess.deps.json
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\bin\Debug\netstandard2.0\ClassroomApp.DataAccess.dll
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\obj\Debug\netstandard2.0\ClassroomApp.DataAccess.AssemblyInfoInputs.cache
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\obj\Debug\netstandard2.0\ClassroomApp.DataAccess.AssemblyInfo.cs
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\obj\Debug\netstandard2.0\ClassroomApp.DataAccess.csprojAssemblyReference.cache
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\bin\Debug\netstandard2.0\ClassroomApp.DataAccess.pdb
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\bin\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.dll
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\bin\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.pdb
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\obj\Debug\netstandard2.0\ClassroomApp.DataAccess.csproj.CoreCompileInputs.cache
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\obj\Debug\netstandard2.0\ClassroomApp.DataAccess.csproj.CopyComplete
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\obj\Debug\netstandard2.0\ClassroomApp.DataAccess.dll
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.DataAccess\obj\Debug\netstandard2.0\ClassroomApp.DataAccess.pdb

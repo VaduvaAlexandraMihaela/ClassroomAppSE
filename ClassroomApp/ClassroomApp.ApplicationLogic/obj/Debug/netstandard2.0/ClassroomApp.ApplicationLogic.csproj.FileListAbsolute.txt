@@ -1,0 +1,9 @@
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.ApplicationLogic\bin\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.deps.json
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.ApplicationLogic\bin\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.dll
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.ApplicationLogic\bin\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.pdb
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.ApplicationLogic\obj\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.csprojAssemblyReference.cache
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.ApplicationLogic\obj\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.csproj.CoreCompileInputs.cache
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.ApplicationLogic\obj\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.AssemblyInfoInputs.cache
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.ApplicationLogic\obj\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.AssemblyInfo.cs
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.ApplicationLogic\obj\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.dll
+D:\Facultate\ClassroomAppSE\ClassroomApp\ClassroomApp.ApplicationLogic\obj\Debug\netstandard2.0\ClassroomApp.ApplicationLogic.pdb
