@@ -1,0 +1,23 @@
+﻿@model ClassroomApp.Models.ClassroomModel.DeleteClassroomViewModel
+@{
+    ViewData["Title"] = "DeleteClassroom";
+}
+
+<h1>DeleteClassroom</h1>
+
+
+
+<div>
+
+    <form asp-action="DeleteClassroom">
+
+        <input type="hidden" asp-for="Id" />
+
+        <input type="submit" value="Delete" class="btn btn-secondary" />
+
+        <a asp-action="ViewClassrooms">Back</a>
+
+    </form>
+
+</div>
+

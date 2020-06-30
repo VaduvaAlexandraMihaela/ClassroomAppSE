@@ -13,6 +13,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ClassroomApp.DataAccess;
+using ClassroomApp.ApplicationLogic.Abstractions;
+using ClassroomApp.ApplicationLogic.Services;
 
 namespace ClassroomApp
 {
@@ -38,6 +40,12 @@ namespace ClassroomApp
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
+            services.AddScoped<IClassroomRepository, ClassroomRepository>();
+            services.AddScoped<IGroupRepository, GroupRepository>();
+            services.AddScoped<TeacherService>();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

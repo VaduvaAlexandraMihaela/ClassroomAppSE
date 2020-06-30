@@ -1,0 +1,63 @@
+﻿@model ClassroomApp.Models.ClassroomModel.GetAllClassroomsViewModel
+@{
+    ViewData["Title"] = "ViewClassrooms";
+}
+
+<h1>Classrooms </h1>
+
+<table class="table" BORDERCOLOR=#006666>
+
+    <thead>
+
+        <tr>
+
+
+
+            <th style="text-align:center">
+
+                @Html.DisplayName("Subject title")
+
+            </th>
+
+            <th style="text-align:center"> Delete Classroom</th>
+
+
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.Classrooms)
+        {
+
+            <tr>
+
+
+
+                <td style="text-align:center">
+
+                    @Html.DisplayFor(model => item.Name)
+
+                </td>
+
+
+                <td style="text-align:center">
+
+                        <a asp-action="DeleteClassroom" asp-route-id="@item.Id">Delete</a>
+
+                </td>
+                
+
+
+            </tr>
+
+
+
+        }
+    </tbody>
+
+
+</table>
+
+<a asp-action="AddClassroom">Add Classroom</a>

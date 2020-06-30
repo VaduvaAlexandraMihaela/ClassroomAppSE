@@ -9,5 +9,6 @@ namespace ClassroomApp.ApplicationLogic.Data
         public Guid Id { get; set; }
         public Teacher teacher { get; set; }
         public string Name { get; set; }
+        public ICollection<Classroom> Classrooms { get; set; }
     }
 }
