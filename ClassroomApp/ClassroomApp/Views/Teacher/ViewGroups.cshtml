@@ -1,0 +1,65 @@
+﻿@model ClassroomApp.Models.GroupModel.GetAllGroupsViewModel
+@{
+    ViewData["Title"] = "ViewGroups";
+}
+
+<h1>Classroom Groups</h1>
+
+<table class="table" BORDERCOLOR=#006666>
+
+    <thead>
+
+        <tr>
+
+
+
+            <th style="text-align:center">
+
+                @Html.DisplayName("Group Name")
+
+            </th>
+
+            <th style="text-align:center"> Delete Group</th>
+
+
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.Groups)
+        {
+
+        <tr>
+
+
+
+            <td style="text-align:center">
+
+                @Html.DisplayFor(model => item.Name)
+
+            </td>
+
+
+            @*  <td style="text-align:center">
+
+            <a asp-action="" asp-route-id="@item.Id">Delete</a>
+
+        </td> *@
+
+
+
+        </tr>
+
+
+
+        }
+    </tbody>
+
+
+</table>
+
+<a asp-action="AddGroup">Add Group</a> 
+
+<a asp-action="AddClassroomToGroup">Add Classrooms To Groups</a>

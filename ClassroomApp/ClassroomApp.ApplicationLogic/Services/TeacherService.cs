@@ -2,6 +2,7 @@
 using ClassroomApp.ApplicationLogic.Data;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace ClassroomApp.ApplicationLogic.Services
@@ -11,13 +12,17 @@ namespace ClassroomApp.ApplicationLogic.Services
         ITeacherRepository teacherRepository;
         IClassroomRepository classroomRepository;
         IGroupRepository groupRepository;
+        IStudentRepository studentRepository;
+        IAssignmentRepository assignmentRepository;
 
        public TeacherService(ITeacherRepository teacherRepository, IClassroomRepository classroomRepository,
-           IGroupRepository groupRepository)
+           IGroupRepository groupRepository, IStudentRepository studentRepository, IAssignmentRepository assignmentRepository)
         {
             this.teacherRepository = teacherRepository;
             this.classroomRepository = classroomRepository;
             this.groupRepository = groupRepository;
+            this.studentRepository = studentRepository;
+            this.assignmentRepository = assignmentRepository;
         }
 
         public Teacher GetTeacherById(Guid teacherId)
@@ -26,18 +31,33 @@ namespace ClassroomApp.ApplicationLogic.Services
 
             {
 
-                throw new Exception("Null project id");
+                throw new Exception("Null teacher id");
 
             }
             return teacherRepository.GetTeacherById(teacherId);
         }
 
-        public IEnumerable<Classroom> GetAllClassrooms()
-
+        public void AddTeacher(string Name, string Email)
         {
+            teacherRepository.Add(new Teacher()
+            {
+                Id = Guid.NewGuid(),
+                Name = Name,
+                Email = Email,
+            });
+        }
 
-            return classroomRepository.GetAll();
+        public void AddAssignment(string Description, DateTime deadline, Guid idClassroom)
+        {
+            var classroom = classroomRepository.GetClassroomById(idClassroom);
 
+            assignmentRepository.Add(new Assignment()
+            {
+                Id = Guid.NewGuid(),
+                classroom = classroom,
+                Description = Description,
+                Deadline = deadline
+            });
         }
 
         public void AddClassroom(string Name)
@@ -45,17 +65,47 @@ namespace ClassroomApp.ApplicationLogic.Services
             classroomRepository.Add(new Classroom()
             {
                 Id = Guid.NewGuid(),
-                Name = Name
+                Name = Name, 
+                Students = new List<Student>()
             });
+        }
+
+        public IEnumerable<Group> GetAllGroups()
+        {
+            return groupRepository.GetAll();
         }
 
         public void AddGroup(string Name)
         {
+           
             groupRepository.Add(new Group
             {
                 Id = Guid.NewGuid(),
-                Name = Name
+                Name = Name, 
+                Classrooms = new Collection<Classroom>(),
             });
+        }
+
+        public void AddClassroomstoGroup(string classroomName, string groupName)
+        {
+            var classroom = classroomRepository.GetClassroomByName(classroomName);
+            var group = groupRepository.GetGroupByName(groupName);
+            if(group.Classrooms == null)
+            {
+                group.Classrooms = new List<Classroom>();
+            }
+            group.Classrooms.Add(classroom);
+        }
+
+        public void AddStudentsToClassroom(string studentName, string classroomName)
+        {
+            var classroom = classroomRepository.GetClassroomByName(classroomName);
+            var student = studentRepository.GetStudentByName(studentName);
+            if(classroom.Students == null)
+            {
+                classroom.Students = new List<Student>();
+            }
+            classroom.Students.Add(student);
         }
 
         public void DeleteClassroom(Guid classroomId)
@@ -68,14 +118,6 @@ namespace ClassroomApp.ApplicationLogic.Services
 
         }
 
-        public string GetClassroomName(Guid id)
-
-        {
-
-            var classObj = classroomRepository.GetClassroomById(id);
-
-            return classObj.Name;
-
-        }
+      
     }
 }

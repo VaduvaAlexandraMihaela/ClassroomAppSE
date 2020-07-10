@@ -19,5 +19,11 @@ namespace ClassroomApp.DataAccess
             var oneClassroom = dbContext.Classrooms.Where(p => p.Id == classroomId).SingleOrDefault();
             return oneClassroom;
         }
+
+        public Classroom GetClassroomByName(string classroomName)
+        {
+            var oneClassroom = dbContext.Classrooms.Where(p => p.Name == classroomName).SingleOrDefault();
+            return oneClassroom;
+        }
     }
 }

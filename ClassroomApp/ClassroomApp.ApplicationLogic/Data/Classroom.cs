@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace ClassroomApp.ApplicationLogic.Data
@@ -11,5 +12,10 @@ namespace ClassroomApp.ApplicationLogic.Data
         public Group group { get; set; }
         public ICollection<Student> Students { get; set; }
         public ICollection<Teacher> Teachers { get; set; }
+
+        public Classroom()
+        {
+            Students = new List<Student>();
+        }
     }
 }

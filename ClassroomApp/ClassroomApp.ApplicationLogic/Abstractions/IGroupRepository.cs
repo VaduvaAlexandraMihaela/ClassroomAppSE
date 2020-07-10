@@ -9,5 +9,6 @@ namespace ClassroomApp.ApplicationLogic.Abstractions
    public interface IGroupRepository : IRepository<Group>
     {
         Group GetGroupById(Guid groupId);
+        Group GetGroupByName(string groupName);
     }
 }

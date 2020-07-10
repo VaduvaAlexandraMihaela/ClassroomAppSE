@@ -1,0 +1,51 @@
+﻿@model ClassroomApp.Models.StudentModel.AddStudentToClassroomViewModel
+@{
+    ViewData["Title"] = "AddStudentToClassroom";
+}
+
+<h1>Add Student To Classroom</h1>
+
+<form asp-action="AddStudentToClassroom" method="post">
+
+
+
+    <div class="row">
+
+        <div class="col-2">
+
+            Student Name
+
+        </div>
+
+        <div class="col-10">
+
+            <input class="form-control" type="text" asp-for="studentName" />
+
+        </div>
+
+        <div class="col-2">
+
+            Classroom Name
+
+        </div>
+
+        <div class="col-10">
+
+            <input class="form-control" type="text" asp-for="classroomName" />
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-10"></div>
+
+        <div class="col-2">
+
+            <button type="submit" class="btn btn-secondary">Save</button>
+
+        </div>
+
+    </div>
+
+</form>

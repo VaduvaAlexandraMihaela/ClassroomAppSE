@@ -21,4 +21,8 @@
     <ProjectReference Include="..\ClassroomApp.DataAccess\ClassroomApp.DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Student\" />
+  </ItemGroup>
+
 </Project>

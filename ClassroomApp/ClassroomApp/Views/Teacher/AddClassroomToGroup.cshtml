@@ -1,0 +1,51 @@
+﻿@model ClassroomApp.Models.GroupModel.AddClassroomToGroupViewModel
+@{
+    ViewData["Title"] = "AddClassroomToGroup";
+}
+
+<h1>Add Classroom To Group</h1>
+
+<form asp-action="AddClassroomToGroup" method="post">
+
+
+
+    <div class="row">
+
+        <div class="col-2">
+
+            Classroom Name
+
+        </div>
+
+        <div class="col-10">
+
+            <input class="form-control" type="text" asp-for="classroomName" />
+
+        </div>
+
+        <div class="col-2">
+
+            Group Name
+
+        </div>
+
+        <div class="col-10">
+
+            <input class="form-control" type="text" asp-for="groupName" />
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-10"></div>
+
+        <div class="col-2">
+
+            <button type="submit" class="btn btn-secondary">Save</button>
+
+        </div>
+
+    </div>
+
+</form>

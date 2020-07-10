@@ -1,0 +1,44 @@
+﻿@model ClassroomApp.Models.StudentModel.ClassroomStudentsViewModel
+@{
+    ViewData["Title"] = "ViewClassroomStudents";
+}
+
+<h1>ViewClassroomStudents</h1>
+
+<form asp-action="ViewClassroomStudents">
+    <table class="table" BORDERCOLOR=#006666>
+
+        <thead>
+
+            <tr>
+
+                <th style="text-align:center">
+
+                    @Html.DisplayName("Student Name")
+
+                </th>
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var item in Model.Students)
+                {
+                    <td style="text-align:center">
+
+                        @Html.DisplayFor(model => item.Name)
+                        
+
+                    </td>
+
+                }
+
+            </tr>
+        </tbody>
+        
+    </table>
+       
+        <a asp-action="ViewClassrooms">Back</a>
+
+</form>

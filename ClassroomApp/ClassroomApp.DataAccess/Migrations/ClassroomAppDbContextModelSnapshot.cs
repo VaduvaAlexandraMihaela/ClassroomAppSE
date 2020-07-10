@@ -194,9 +194,6 @@ namespace ClassroomApp.DataAccess.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("AssignmentId");
@@ -221,9 +218,6 @@ namespace ClassroomApp.DataAccess.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ClassroomId");
@@ -245,7 +239,7 @@ namespace ClassroomApp.DataAccess.Migrations
             modelBuilder.Entity("ClassroomApp.ApplicationLogic.Data.Classroom", b =>
                 {
                     b.HasOne("ClassroomApp.ApplicationLogic.Data.Group", "group")
-                        .WithMany()
+                        .WithMany("Classrooms")
                         .HasForeignKey("groupId");
                 });
 

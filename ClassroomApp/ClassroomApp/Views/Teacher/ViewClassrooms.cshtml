@@ -21,7 +21,9 @@
 
             <th style="text-align:center"> Delete Classroom</th>
 
+            <th style="text-align:center"> Add Classroom To Group</th>
 
+            <th style="text-align:center"> View Students Enrolled</th>
 
         </tr>
 
@@ -44,11 +46,21 @@
 
                 <td style="text-align:center">
 
-                        <a asp-action="DeleteClassroom" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="DeleteClassroom" asp-route-id="@item.Id">Delete</a>
 
                 </td>
-                
 
+                <td style="text-align:center">
+
+                    <a asp-action="AddClassroomToGroup" asp-route-id="@item.Id">Add Classroom To Group</a>
+
+                </td>
+
+                <td style="text-align:center">
+
+                    <a asp-action="ViewClassroomStudents" asp-route-id="@item.Id">View Classroom Students</a>
+
+                </td>
 
             </tr>
 
@@ -61,3 +73,5 @@
 </table>
 
 <a asp-action="AddClassroom">Add Classroom</a>
+
+<a asp-action="AddStudentToClassroom">Add Student To Classroom</a>

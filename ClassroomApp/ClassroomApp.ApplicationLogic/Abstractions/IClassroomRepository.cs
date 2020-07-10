@@ -8,5 +8,6 @@ namespace ClassroomApp.ApplicationLogic.Abstractions
    public interface IClassroomRepository : IRepository<Classroom>
     {
         Classroom GetClassroomById(Guid classroomId);
+        Classroom GetClassroomByName(string classroomName);
     }
 }

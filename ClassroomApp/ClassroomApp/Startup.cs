@@ -45,6 +45,11 @@ namespace ClassroomApp
             services.AddScoped<IClassroomRepository, ClassroomRepository>();
             services.AddScoped<IGroupRepository, GroupRepository>();
             services.AddScoped<TeacherService>();
+            services.AddScoped<GroupService>();
+            services.AddScoped<ClassroomService>();
+
+            services.AddScoped<IStudentRepository, StudentRepository>();
+            services.AddScoped<StudentService>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();

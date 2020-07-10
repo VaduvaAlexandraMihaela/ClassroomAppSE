@@ -19,5 +19,11 @@ namespace ClassroomApp.DataAccess
             var oneGroup = dbContext.Groups.Where(p => p.Id == groupId).SingleOrDefault();
             return oneGroup;
         }
+
+        public Group GetGroupByName(string groupName)
+        {
+            var oneGroup = dbContext.Groups.Where(p => p.Name == groupName).SingleOrDefault();
+            return oneGroup;
+        }
     }
 }
