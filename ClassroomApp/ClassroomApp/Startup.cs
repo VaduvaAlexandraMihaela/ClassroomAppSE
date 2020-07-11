@@ -44,6 +44,7 @@ namespace ClassroomApp
             services.AddScoped<ITeacherRepository, TeacherRepository>();
             services.AddScoped<IClassroomRepository, ClassroomRepository>();
             services.AddScoped<IGroupRepository, GroupRepository>();
+            services.AddScoped<IAssignmentRepository, AssignmentRepository>();
             services.AddScoped<TeacherService>();
             services.AddScoped<GroupService>();
             services.AddScoped<ClassroomService>();
